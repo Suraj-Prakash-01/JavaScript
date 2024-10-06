@@ -6,7 +6,7 @@
 
 # Solution Code
 
-# Project 1 : Changing Color on Click
+## Project 1 : Changing Color on Click
 
 ```javascript
 const buttons = document.querySelectorAll(".button");
@@ -24,7 +24,7 @@ buttons.forEach(function (button) {
 });
 ```
 
-# Project 2 : Calculating BMI
+## Project 2 : Calculating BMI
 
 ```javascript
 const form = document.querySelector("form");
@@ -47,4 +47,17 @@ form.addEventListener("submit", function (e) {
     results.innerHTML = `<span>${bmi}</span>`;
   }
 });
+```
+
+## Project 3: Digital Clock
+
+```javascript
+const clock = document.getElementById("clock");
+// const clock= document.querySelector('#clock')
+
+setInterval(function () {
+  let date = new Date();
+  // console.log(date.toLocaleTimeString())
+  clock.innerHTML = date.toLocaleTimeString();
+}, 1000);
 ```
