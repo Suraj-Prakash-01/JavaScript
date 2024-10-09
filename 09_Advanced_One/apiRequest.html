@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Request</title>
+  </head>
+  <body style="background-color: #212121">
+    <script>
+      const requestURL = "https://api.github.com/users/hiteshchaudhary";
+      const xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function () {
+        console.log(xhr.readyState);
+        if (xhr.readyState === 4) {
+          // We are doing this because the response sent is of the type string
+          let data = JSON.parse(this.responseText);
+          console.log(data);
+          console.log(data.followers);
+        }
+      };
+
+      xhr.open("GET", requestURL);
+      xhr.send();
+    </script>
+  </body>
+</html>
