@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: #212121">
+    <h1 style="color: #fff">How are you all doing?</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+
+    <script>
+      let changeText = function () {
+        document.querySelector("h1").innerHTML = "I am the best in the world";
+      };
+
+      let changeMe = setTimeout(changeText, 2000);
+
+      let btn = document.getElementById("stop");
+      btn.addEventListener("click", function () {
+        clearTimeout(changeMe);
+        console.log(`Stopped`);
+      });
+    </script>
+  </body>
+</html>
